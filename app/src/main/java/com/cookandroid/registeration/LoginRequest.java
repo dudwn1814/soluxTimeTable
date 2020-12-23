@@ -6,15 +6,16 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class  ValidateRequest extends StringRequest {
+public class LoginRequest extends StringRequest {
 
-    final static private String URL = "http:///UserValidate.php";
+    final static private String URL = "http:///UserLogin.php";
     private Map<String, String> parameters;
 
-    public ValidateRequest(String userID, Response.Listener<String> listener){
+    public LoginRequest(String userID, String userPassword, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
         parameters = new HashMap<>();
         parameters.put("userID", userID);
+        parameters.put("userPassword", userPassword);
     }
 
     @Override
