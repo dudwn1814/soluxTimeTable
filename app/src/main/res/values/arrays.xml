@@ -70,4 +70,31 @@
         <item>환경디자인과</item>
         <item>회화과</item>
     </string-array>
+    <string-array name="year">
+        <item>2019년도</item>
+        <item>2020년도</item>
+        <item>2021년도</item>
+        <item>2022년도</item>
+        <item>2023년도</item>
+        <item>2024년도</item>
+        <item>2025년도</item>
+        <item>2026년도</item>
+        <item>2027년도</item>
+        <item>2028년도</item>
+        <item>2029년도</item>
+        <item>2030년도</item>
+    </string-array>
+    <string-array name="term"
+        <item>1학기</item>
+        <item>여름학기</item>
+        <item>2학기</item>
+        <item>겨울학기</item>
+    </string-array>
+    <string-array name="graduateArea">
+    <item>일반대학원</item>
+    </string-array>
+    <string-array name="universityArea">
+        <item>교양및기타</item>
+        <item>전공</item>
+    </string-array>
 </resources>
