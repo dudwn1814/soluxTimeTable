@@ -3,17 +3,18 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
         android:layout_gravity="center"
-        android:text="추가"
-        android:background="@color/colorPrimary"
+        android:text="1위"
+        android:background="@color/colorWinner"
         android:textColor="#ffffff"
-        android:textSize="18dp"
-        android:id="@+id/addButton"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"/>
+        android:textSize="15dp"
+        android:id="@+id/rankTextView"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +45,8 @@
                 android:padding="3dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"/>
-            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

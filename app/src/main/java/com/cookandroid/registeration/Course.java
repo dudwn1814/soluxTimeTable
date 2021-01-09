@@ -13,9 +13,12 @@ public class Course {
     int courseCredit; //강의 학점
     int courseDivide; //강의 분반
     int coursePersonnel; //강의 제한 인원
-    String coursePrefessor; //강의 교수
+    String courseProfessor; //강의 교수
     String courseTime; //강의 시간대
     String courseRoom; //강의실
+    int courseRival; //강의 경쟁자 수
+
+
 
     public int getCourseID() {
         return courseID;
@@ -105,12 +108,12 @@ public class Course {
         this.coursePersonnel = coursePersonnel;
     }
 
-    public String getCoursePrefessor() {
-        return coursePrefessor;
+    public String getCourseProfessor() {
+        return courseProfessor;
     }
 
-    public void setCoursePrefessor(String coursePrefessor) {
-        this.coursePrefessor = coursePrefessor;
+    public void setCourseProfessor(String courseProfessor) {
+        this.courseProfessor = courseProfessor;
     }
 
     public String getCourseTime() {
@@ -129,7 +132,44 @@ public class Course {
         this.courseRoom = courseRoom;
     }
 
-    public Course(int courseID, String courseUniversity, int courseYear, String courseTerm, String courseArea, String courseMajor, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String coursePrefessor, String courseTime, String courseRoom) {
+    public Course(int courseID, String courseTitle, int courseDivide,String courseGrade,  int coursePersonnel, int courseRival) {
+        this.courseID = courseID;
+        this.courseTitle = courseTitle;
+        this.courseDivide = courseDivide;
+        this.courseGrade = courseGrade;
+        this.coursePersonnel = coursePersonnel;
+        this.courseRival = courseRival;
+    }
+    public Course(int courseID, String courseTitle, int courseDivide,String courseGrade,  int coursePersonnel, int courseRival, int courseCredit) {
+        this.courseID = courseID;
+        this.courseTitle = courseTitle;
+        this.courseDivide = courseDivide;
+        this.courseGrade = courseGrade;
+        this.coursePersonnel = coursePersonnel;
+        this.courseRival = courseRival;
+        this.courseCredit = courseCredit;
+    }
+
+    public Course(int courseID, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseTime, String courseProfessor) {
+        this.courseID = courseID;
+        this.courseGrade = courseGrade;
+        this.courseTitle = courseTitle;
+        this.courseCredit = courseCredit;
+        this.courseDivide = courseDivide;
+        this.coursePersonnel = coursePersonnel;
+        this.courseTime = courseTime;
+        this.courseProfessor = courseProfessor;
+    }
+
+    public int getCourseRival() {
+        return courseRival;
+    }
+
+    public void setCourseRival(int courseRival) {
+        this.courseRival = courseRival;
+    }
+
+    public Course(int courseID, String courseUniversity, int courseYear, String courseTerm, String courseArea, String courseMajor, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime, String courseRoom) {
         this.courseID = courseID;
         this.courseUniversity = courseUniversity;
         this.courseYear = courseYear;
@@ -141,8 +181,9 @@ public class Course {
         this.courseCredit = courseCredit;
         this.courseDivide = courseDivide;
         this.coursePersonnel = coursePersonnel;
-        this.coursePrefessor = coursePrefessor;
+        this.courseProfessor = courseProfessor;
         this.courseTime = courseTime;
         this.courseRoom = courseRoom;
+
     }
 }

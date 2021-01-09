@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.pm.ActivityInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -23,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView noticeListView;
     private NoticeListAdapter adapter;
     private List<Notice> noticeList;
-    public staticString userID;
+    public static String userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +37,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        userID = getIntent().getStringExtra("userID);")
+        userID = getIntent().getStringExtra("userID");
 
 
         noticeListView = (ListView)findViewById(R.id.noticeListView);
         noticeList = new ArrayList<Notice>();
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
-        noticeList.add(new Notice("공지사항입니다.", "안영주", "2020-12-30"));
         adapter = new NoticeListAdapter(getApplicationContext(), noticeList);
         noticeListView.setAdapter(adapter);
 
@@ -58,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 notice.setVisibility(View.GONE);
-                courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
@@ -73,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 notice.setVisibility(View.GONE);
                 courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -88,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 notice.setVisibility(View.GONE);
                 courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, new StatisticsFragment());
@@ -102,14 +98,15 @@ public class MainActivity extends AppCompatActivity {
      class BackgroundTask extends AsyncTask<Void, Void, String>
      {
          String target;
-
          @Override
          protected void onPreExecute() {
              target = "http://duwjd20602.cafe24.com/NoticeList.php";
          }
 
-         @Override
-         protected String dolnBackground(Void... voids) {
+
+
+        @Override
+         protected String doInBackground(Void... voids) {
              try{
                  URL url = new URL(target);
                  HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -117,28 +114,29 @@ public class MainActivity extends AppCompatActivity {
                  BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                  String temp;
                  StringBuilder stringBuilder = new StringBuilder();
-                 while((temp = bufferedReader.readLine)) != null)
+                 while((temp = bufferedReader.readLine()) != null)
                  {
                      stringBuilder.append(temp + "Wn");
                  }
                  bufferedReader.close();
-                inputStream.close();
-                httpURLConnection.disconnect();
-                return stringBuilder.toString().trim();
+                 inputStream.close();
+                 httpURLConnection.disconnect();
+                 return stringBuilder.toString().trim();
              }  catch (Exception e) {
                  e.printStackTrace();
              }
-
              return null;
          }
 
+
+
          @Override
-         public void onProgressUpdate(Void... values) {
+         public void onProgressUpdate(Void... values){
              super.onProgressUpdate();
          }
 
          @Override
-         public void onProgressUpdate(String result) {
+         public void onPostExecute(String result) {
              try{
                  JSONObject jsonObject = new JSONObject(result);
                  JSONArray jsonArray = jsonObject.getJSONArray("response");
@@ -146,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                  String noticeContent, noticeName, noticeDate;
                  while (count < jsonArray.length())
                  {
-                    JsonObject object = jsonArray.getJSONObject(count);
+                    JSONObject object = jsonArray.getJSONObject(count);
                     noticeContent = object.getString("noticeContent");
                     noticeName = object.getString("noticeName");
                     noticeDate = object.getString("noticeDate");
@@ -169,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
             return;
         }
-        Toast.makeText(this, "'뒤로' 버튼을 한 번 더 눌러 종료합니다."), Toast.LENGTH_SHORT);
+        Toast.makeText(this, "'뒤로' 버튼을 한 번 더 눌러 종료합니다.", Toast.LENGTH_SHORT);
         lastTimeBackPressed = System.currentTimeMillis();
     }
 
