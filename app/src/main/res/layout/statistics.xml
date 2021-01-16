@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background = "@color/colorBackground">
 
     <Button
         android:id="@+id/deleteButton"
@@ -35,6 +37,7 @@
                 android:padding="3dp"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,6 +49,15 @@
                 android:textColorHint="#ffffff"
                 android:textStyle="bold"/>
 
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/courseDivide"
                 android:layout_width="85dp"
@@ -53,14 +65,7 @@
                 android:layout_gravity="center"
                 android:padding="3dp"
                 android:text="1분반"
-                android:textColor="#ffffff" />
-
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:orientation="horizontal">
+                android:textColor="@color/colorPrimaryDark" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,6 +76,7 @@
                 android:padding="2dp"
                 android:textColor="#000000"
                 android:textColorHint="#ffffff"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,8 +87,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimaryDark"/>
 
-
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

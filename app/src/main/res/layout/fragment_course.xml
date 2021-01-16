@@ -4,33 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CourseFragment">
+    tools:context=".CourseFragment"
+    android:background = "@color/colorBackground">
 
     <!-- TODO: Update blank fragment layout -->
     <RadioGroup
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/courseUniversityGroup"
-        android:latout_gravity="center+horizontal"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_marginTop="10dp">
-
 
          <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="학부"
-            android:id="@+id/university"
-        />
+            android:id="@+id/university" />
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="대학원"
-           android:id="@+id/graduate"
-            />
+           android:id="@+id/graduate" />
+
     </RadioGroup>
 
     <LinearLayout
@@ -62,6 +61,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/areaSpinner"></Spinner>
+
     </LinearLayout>
 
     <LinearLayout
@@ -85,7 +85,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginleft="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@color/colorWarning"
             android:text="강의 검색"
             android:textColor="#ffffff"
@@ -105,10 +105,9 @@
             android:layout_height="match_parent"
             android:id="@+id/courseListView"
             android:dividerHeight="10dp"
-            android:devider="#ffffff"
+            android:divider="#ffffff"
             android:padding="5dp"></ListView>
+
     </LinearLayout>
-
-
 
 </LinearLayout>

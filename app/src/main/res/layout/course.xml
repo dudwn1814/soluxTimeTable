@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background = "@color/colorBackground">
 
     <Button
         android:layout_width="80dp"
@@ -44,14 +46,14 @@
                 android:padding="3dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold"/>
-            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#ffffff">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -80,6 +82,7 @@
                 android:layout_gravity="center"
                 android:padding="3dp"
                 android:textColor="#000000"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -105,10 +108,9 @@
                 android:layout_gravity="center"
                 android:padding="3dp"
                 android:textColor="@color/colorPrimaryDark"/>
+
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </LinearLayout>

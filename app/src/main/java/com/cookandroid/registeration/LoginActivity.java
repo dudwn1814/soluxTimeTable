@@ -80,6 +80,14 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
+
+        TextView information = (TextView) findViewById(R.id.information);
+        information.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(LoginActivity.this, Pop.class));
+            }
+        });
     }
 
     @Override

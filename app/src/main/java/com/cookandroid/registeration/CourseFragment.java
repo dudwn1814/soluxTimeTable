@@ -55,6 +55,7 @@ public class CourseFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public CourseFragment() {
         // Required empty public constructor
     }
@@ -121,9 +122,11 @@ public class CourseFragment extends Fragment {
 
                 yearAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.year, android.R.layout.simple_spinner_dropdown_item);
                 yearSpinner.setAdapter(yearAdapter);
+                yearSpinner.setSelection(2);
 
                 termAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.term, android.R.layout.simple_spinner_dropdown_item);
                 termSpinner.setAdapter(termAdapter);
+                yearSpinner.setSelection(0);
 
                 if(courseUniversity.equals("학부")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
@@ -137,7 +140,6 @@ public class CourseFragment extends Fragment {
                     majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
-
             }
         });
 
@@ -167,37 +169,8 @@ public class CourseFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
-
-                Response.Listener<String> responseListener = (response) ->  {
-
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-                            if(success){
-                                AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
-                                AlertDialog dialog = builder.setMessage("사용할 수 있는 아이디입니다.")
-                                        .setPositiveButton("확인",null).create();
-                                dialog.show();
-                            }
-                            else{
-                                AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
-                                AlertDialog dialog = builder.setMessage("사용할 수 없는 아이디입니다.")
-                                        .setNegativeButton("확인",null).create();
-                                dialog.show();
-                            }
-                        }
-                        catch (Exception e){
-                            e.printStackTrace();
-                        }
-                    };
-
-                /*AddRequest addRequest = new AddRequest(userID, courseList.get(i).getCourseID().responseListener);
-                RequestQueue queue  = Volley.newRequestQueue(parent.getActivity());
-                queue.add(addRequest);*/
             }
-
         });
-
 
         courseListView = (ListView) getView().findViewById(R.id.courseListView);
         courseList = new ArrayList<Course>();
