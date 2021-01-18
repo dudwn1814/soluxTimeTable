@@ -29,6 +29,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -120,7 +121,7 @@ public class CourseFragment extends Fragment {
                 RadioButton courseButton = (RadioButton) getView().findViewById(i);
                 courseUniversity = courseButton.getText().toString();
 
-                yearAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.year, android.R.layout.simple_spinner_dropdown_item);
+                yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
                 yearSpinner.setAdapter(yearAdapter);
                 yearSpinner.setSelection(2);
 
@@ -197,6 +198,56 @@ public class CourseFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_course, container, false);
     }
 
+    //여기부터 수정
+    class BackgroundTask extends AsyncTask<Void, Void, String>
+    {
+        String target;
+
+        @Override
+        protected void onPreExecute() {
+            try
+            {
+                target = "http://duwjd20602.cafe24.com/CourseList.php?courseUniversity=" + URLEncoder.encode(courseUniversity, "UTF-8") +
+                        "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString().substring(0, 4), "UTF-8") + "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
+                        "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") + "&courseMajor="  + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try{
+                URL url = new URL(target);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String temp;
+                StringBuilder stringBuilder = new StringBuilder();
+                while((temp = bufferedReader.readLine()) != null)
+                {
+                    stringBuilder.append(temp + "\n");
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();
+            }  catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+
+
+        @Override
+        public void onProgressUpdate(Void... values){
+            super.onProgressUpdate();
+        }
+
+
+    /*
     class BackgroundTask extends AsyncTask<Void,  Void, String>
     {
         String target;
@@ -241,6 +292,7 @@ public class CourseFragment extends Fragment {
         public void onProgressUpdate(Void... values) {
             super.onProgressUpdate();
         }
+*/
 
         @Override
         public void onPostExecute(String result) {
@@ -276,11 +328,11 @@ public class CourseFragment extends Fragment {
                     courseTitle = object.getString("courseTitle");
                     courseCredit = object.getInt("courseCredit");
                     courseDivide = object.getInt("courseDivide");
-                    coursePersonnel =object.getInt("coursePersonnel");
+                    coursePersonnel = object.getInt("coursePersonnel");
                     courseProfessor = object.getString("courseProfessor");
                     courseTime = object.getString("courseTime");
                     courseRoom = object.getString("courseRoom");
-                    Course course = new Course(courseID, courseUniversity, courseYear,courseTerm, courseArea, courseMajor,courseGrade, courseTitle,courseCredit,courseDivide,coursePersonnel, courseProfessor, courseTime,courseRoom);
+                    Course course = new Course(courseID, courseUniversity, courseYear, courseTerm, courseArea, courseMajor, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime, courseRoom);
                     courseList.add(course);
                     count++;
                 }

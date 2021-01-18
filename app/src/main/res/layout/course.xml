@@ -9,12 +9,13 @@
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:text="추가"
         android:background="@color/colorPrimary"
         android:textColor="#ffffff"
         android:textSize="18dp"
         android:id="@+id/addButton"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="13dp"
         android:layout_marginLeft="8dp"/>
 
     <LinearLayout
@@ -37,7 +38,7 @@
                 android:padding="3dp"
                 android:textColor="#ffffff"/>
 
-            <Textview
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의 제목"
@@ -65,7 +66,7 @@
                 android:textColor="#000000"
                 android:textStyle="bold"/>
 
-            <Textview
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3학점"
@@ -74,7 +75,7 @@
                 android:padding="3dp"
                 android:textColor="#000000"/>
 
-            <Textview
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1분반"
@@ -91,7 +92,7 @@
             android:orientation="horizontal"
             android:background="#ffffff">
 
-            <Textview
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의 제한 인원"
@@ -100,7 +101,7 @@
                 android:padding="3dp"
                 android:textColor="#f92a3f"/>
 
-            <Textview
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="강의 시간대"

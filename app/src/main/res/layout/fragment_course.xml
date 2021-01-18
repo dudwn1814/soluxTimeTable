@@ -7,7 +7,6 @@
     tools:context=".CourseFragment"
     android:background = "@color/colorBackground">
 
-    <!-- TODO: Update blank fragment layout -->
     <RadioGroup
         android:layout_width="200dp"
         android:layout_height="wrap_content"

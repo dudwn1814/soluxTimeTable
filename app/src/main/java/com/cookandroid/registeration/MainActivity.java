@@ -98,12 +98,11 @@ public class MainActivity extends AppCompatActivity {
      class BackgroundTask extends AsyncTask<Void, Void, String>
      {
          String target;
+
          @Override
          protected void onPreExecute() {
              target = "http://duwjd20602.cafe24.com/NoticeList.php";
          }
-
-
 
         @Override
          protected String doInBackground(Void... voids) {
@@ -116,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                  StringBuilder stringBuilder = new StringBuilder();
                  while((temp = bufferedReader.readLine()) != null)
                  {
-                     stringBuilder.append(temp + "Wn");
+                     stringBuilder.append(temp + "\n");
                  }
                  bufferedReader.close();
                  inputStream.close();

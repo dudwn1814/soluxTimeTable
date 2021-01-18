@@ -15,17 +15,16 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
-                android:layout_width="14dp"
-                android:layout_height="41dp"
-                android:layout_gravity="center"
-                android:drawableStart="@drawable/ic_baseline_assignment_24"
-                android:drawableLeft="@drawable/ic_baseline_assignment_24"
-                android:text="" />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,7 +35,7 @@
                 android:textSize="17dp"
                 android:textAlignment="center" />
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +46,7 @@
                 android:textSize="17dp"
                 android:textAlignment="center"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +57,7 @@
                 android:textSize="17dp"
                 android:textAlignment="center"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,7 +68,7 @@
                 android:textSize="17dp"
                 android:textAlignment="center"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,12 +85,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
                 android:gravity="right"
                 android:text="8"
                 android:textColor="#ffffff"
@@ -99,7 +99,7 @@
                 android:textSize="15dp"
                 android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -111,7 +111,7 @@
                 android:id="@+id/monday0"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -123,7 +123,7 @@
                 android:id="@+id/tuesday0"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -135,7 +135,7 @@
                 android:id="@+id/wednesday0"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -147,7 +147,7 @@
                 android:id="@+id/thursday0"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -165,20 +165,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="9"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -190,7 +192,7 @@
                 android:id="@+id/monday1"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -202,7 +204,7 @@
                 android:id="@+id/tuesday1"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -214,7 +216,7 @@
                 android:id="@+id/wednesday1"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -226,7 +228,7 @@
                 android:id="@+id/thursday1"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -244,12 +246,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
                 android:gravity="right"
                 android:text="10"
                 android:textColor="#ffffff"
@@ -257,7 +260,8 @@
                 android:textSize="15dp"
                 android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -269,7 +273,7 @@
                 android:id="@+id/monday2"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -281,7 +285,7 @@
                 android:id="@+id/tuesday2"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -293,7 +297,7 @@
                 android:id="@+id/wednesday2"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -305,7 +309,7 @@
                 android:id="@+id/thursday2"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -323,20 +327,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="11"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -348,7 +354,7 @@
                 android:id="@+id/monday3"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -360,7 +366,7 @@
                 android:id="@+id/tuesday3"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -372,7 +378,7 @@
                 android:id="@+id/wednesday3"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -384,7 +390,7 @@
                 android:id="@+id/thursday3"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -402,20 +408,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="12"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -427,7 +434,7 @@
                 android:id="@+id/monday4"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -439,7 +446,7 @@
                 android:id="@+id/tuesday4"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -451,7 +458,7 @@
                 android:id="@+id/wednesday4"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -463,7 +470,7 @@
                 android:id="@+id/thursday4"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -481,20 +488,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="1"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -506,7 +515,7 @@
                 android:id="@+id/monday5"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -518,7 +527,7 @@
                 android:id="@+id/tuesday5"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -530,7 +539,7 @@
                 android:id="@+id/wednesday5"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -542,7 +551,7 @@
                 android:id="@+id/thursday5"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -560,21 +569,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="2"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:padding="2dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -586,7 +595,7 @@
                 android:id="@+id/monday6"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -598,7 +607,7 @@
                 android:id="@+id/tuesday6"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -610,7 +619,7 @@
                 android:id="@+id/wednesday6"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -622,7 +631,7 @@
                 android:id="@+id/thursday6"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -640,21 +649,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="3"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:padding="2dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -666,7 +676,7 @@
                 android:id="@+id/monday7"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -678,7 +688,7 @@
                 android:id="@+id/tuesday7"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -690,7 +700,7 @@
                 android:id="@+id/wednesday7"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -702,7 +712,7 @@
                 android:id="@+id/thursday7"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -720,20 +730,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="4"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -745,7 +756,7 @@
                 android:id="@+id/monday8"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -757,7 +768,7 @@
                 android:id="@+id/tuesday8"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -769,7 +780,7 @@
                 android:id="@+id/wednesday8"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -781,7 +792,7 @@
                 android:id="@+id/thursday8"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -799,21 +810,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="5"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:padding="2dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -825,7 +837,7 @@
                 android:id="@+id/monday9"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -837,7 +849,7 @@
                 android:id="@+id/tuesday9"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -849,7 +861,7 @@
                 android:id="@+id/wednesday9"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -861,7 +873,7 @@
                 android:id="@+id/thursday9"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -879,21 +891,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="6"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:padding="2dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -905,7 +917,7 @@
                 android:id="@+id/monday10"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -917,7 +929,7 @@
                 android:id="@+id/tuesday10"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -929,7 +941,7 @@
                 android:id="@+id/wednesday10"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -941,7 +953,7 @@
                 android:id="@+id/thursday10"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -959,21 +971,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="7"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:padding="2dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -985,7 +998,7 @@
                 android:id="@+id/monday11"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -997,7 +1010,7 @@
                 android:id="@+id/tuesday11"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1009,7 +1022,7 @@
                 android:id="@+id/wednesday11"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1021,7 +1034,7 @@
                 android:id="@+id/thursday11"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1039,20 +1052,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
                 android:gravity="right"
                 android:text="8"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
                 android:textStyle="bold"
+                android:textSize="15dp"
                 android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1064,7 +1078,7 @@
                 android:id="@+id/monday12"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1076,7 +1090,7 @@
                 android:id="@+id/tuesday12"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1088,7 +1102,7 @@
                 android:id="@+id/wednesday12"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1100,7 +1114,7 @@
                 android:id="@+id/thursday12"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1118,20 +1132,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryDark">
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="right"
                 android:text="9"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="1dp" />
+                android:paddingRight="1dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+
+            <TextView
                 android:text="월"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1143,7 +1159,7 @@
                 android:id="@+id/monday13"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="화"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1155,7 +1171,7 @@
                 android:id="@+id/tuesday13"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="수"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1167,7 +1183,7 @@
                 android:id="@+id/wednesday13"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="목"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -1179,7 +1195,7 @@
                 android:id="@+id/thursday13"
                 android:padding="2dp"/>
 
-            <com.cookandroid.registeration.AutoResizeTextView
+            <TextView
                 android:text="금"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

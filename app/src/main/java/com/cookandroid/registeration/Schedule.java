@@ -29,7 +29,7 @@ public class Schedule {
         {
             temp += 2;
             int startPoint = temp;
-            int endPoint;
+            int endPoint = temp;
             for(int i = temp; i < scheduleText.length() && scheduleText.charAt(i) != ':'; i++)
             {
                 if(scheduleText.charAt(i) == '[')
