@@ -92,7 +92,7 @@ public class RankListAdapter extends BaseAdapter {
             {
             courseProfessor.setText(courseList.get(i).getCourseProfessor()+"교수님");
         }
-        courseTime.setText(courseList.get(i).getCourseTitle()+"");
+        courseTime.setText(courseList.get(i).getCourseTime()+"");
         v.setTag(courseList.get(i).getCourseID());
         return v;
     }

@@ -105,6 +105,17 @@ public class StatisticsFragment extends Fragment {
        rankList = new ArrayList<Course>();
        rankListAdapter = new RankListAdapter(getContext().getApplicationContext(), rankList, this);
        rankListView.setAdapter(rankListAdapter);
+       rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+           @Override
+           public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+           }
+
+           @Override
+           public void onNothingSelected(AdapterView<?> adapterView) {
+
+           }
+       });
        //new ByEntire().execute();
 
        rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -180,7 +191,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByEntire.php";
+                target = "http://duwjd20602.cafe24.com/ByMale.php";
             }
             catch (Exception e)
             {
@@ -389,6 +400,7 @@ public class StatisticsFragment extends Fragment {
             //schedule.setting(monday,tuesday,wednesday,thursday,friday,getContext());
         }
     }
+
     class ByMajor extends AsyncTask<Void, Void, String>
     {
         String target;
@@ -469,6 +481,7 @@ public class StatisticsFragment extends Fragment {
             //schedule.setting(monday,tuesday,wednesday,thursday,friday,getContext());
         }
     }
+
     class ByRefinement extends AsyncTask<Void, Void, String>
     {
         String target;

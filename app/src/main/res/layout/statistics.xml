@@ -60,7 +60,7 @@
 
             <TextView
                 android:id="@+id/courseDivide"
-                android:layout_width="85dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:padding="3dp"

@@ -127,7 +127,7 @@ public class CourseFragment extends Fragment {
 
                 termAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.term, android.R.layout.simple_spinner_dropdown_item);
                 termSpinner.setAdapter(termAdapter);
-                yearSpinner.setSelection(0);
+                termSpinner.setSelection(0);
 
                 if(courseUniversity.equals("학부")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
