@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
          @Override
          protected void onPreExecute() {
-             target = "http://duwjd20602.cafe24.com/NoticeList.php";
+             target = "https://duwjd20602.cafe24.com/NoticeList.php";
          }
 
         @Override

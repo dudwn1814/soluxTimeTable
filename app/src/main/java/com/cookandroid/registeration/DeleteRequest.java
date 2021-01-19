@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class DeleteRequest extends StringRequest {
 
-    final static private String URL = "http://duwjd20602.cafe24.com/ScheduleDelete.php";
+    final static private String URL = "https://duwjd20602.cafe24.com/ScheduleDelete.php";
     private Map<String, String> parameters;
 
     public DeleteRequest(String userID, String courseID, Response.Listener<String> listener){
