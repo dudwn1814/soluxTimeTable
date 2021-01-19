@@ -9,4 +9,5 @@
     <color name="colorRed">#FF1212</color>
     <color name="colorSafe">#08C904</color>
     <color name="colorWinner">#FFD700</color>
+    <color name="colorBackground">#C6E8FF</color>
 </resources>
