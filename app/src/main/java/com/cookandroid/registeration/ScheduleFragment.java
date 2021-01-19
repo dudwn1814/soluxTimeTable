@@ -227,7 +227,7 @@ public class ScheduleFragment extends Fragment {
             }  catch (Exception e) {
                 e.printStackTrace();
             }
-            schedule.setting(monday,tuesday,wednesday,thursday,friday,getContext());
+            schedule.setting(monday, tuesday, wednesday, thursday, friday, getContext());
         }
     }
 

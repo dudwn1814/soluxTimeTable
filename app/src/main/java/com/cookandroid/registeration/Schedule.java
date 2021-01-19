@@ -236,7 +236,7 @@ public class Schedule {
             professor="";
         }
         else{
-            professor ="("+courseProfessor+")";
+            professor ="(" + courseProfessor + ")";
         }
         int temp;
         if((temp = scheduleText.indexOf("월")) > -1)
@@ -334,7 +334,7 @@ public class Schedule {
     public void setting(AutoResizeTextView[] monday,AutoResizeTextView[] tuesday,AutoResizeTextView[] wednesday,AutoResizeTextView[] thursday,AutoResizeTextView[] friday, Context context) {
         int maxLength = 0;
         String maxString ="";
-        for(int i=0;i<14;i++)
+        for(int i=0; i<14; i++)
         {
             if(this.monday[i].length() > maxLength)
             {
