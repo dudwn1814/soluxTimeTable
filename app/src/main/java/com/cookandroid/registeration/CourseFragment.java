@@ -207,7 +207,7 @@ public class CourseFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/CourseList.php?courseUniversity=" + URLEncoder.encode(courseUniversity, "UTF-8") +
+                target = "https://duwjd20602.cafe24.com/CourseList.php?courseUniversity=" + URLEncoder.encode(courseUniversity, "UTF-8") +
                         "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString().substring(0, 4), "UTF-8") + "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") + "&courseMajor="  + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
             } catch (Exception e)

@@ -1,6 +1,7 @@
 package com.cookandroid.registeration;
 
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -77,6 +78,7 @@ public class ScheduleFragment extends Fragment {
     private Schedule schedule = new Schedule();
 
     //해당 fragment 생성 시 실행
+    @SuppressLint("WrongViewCast")
     @Override
     public void onActivityCreated(Bundle b){
         super.onActivityCreated(b);
@@ -190,7 +192,7 @@ public class ScheduleFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
             }
             catch (Exception e)
             {

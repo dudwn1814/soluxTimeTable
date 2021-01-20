@@ -191,7 +191,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByMale.php";
+                target = "https://duwjd20602.cafe24.com/ByMale.php";
             }
             catch (Exception e)
             {
@@ -271,7 +271,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByFemale.php";
+                target = "https://duwjd20602.cafe24.com/ByFemale.php";
             }
             catch (Exception e)
             {
@@ -351,7 +351,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByMyMajor.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/ByMyMajor.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
             }
             catch (Exception e)
             {
@@ -432,7 +432,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByMajor.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/ByMajor.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
             }
             catch (Exception e)
             {
@@ -513,7 +513,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByRefinement.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/ByRefinement.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
             }
             catch (Exception e)
             {
@@ -594,7 +594,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ByEntire.php";
+                target = "https://duwjd20602.cafe24.com/ByEntire.php";
             }
             catch (Exception e)
             {
@@ -677,7 +677,7 @@ public class StatisticsFragment extends Fragment {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/StatisticsCourseList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/StatisticsCourseList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
             }
             catch (Exception e)
             {
