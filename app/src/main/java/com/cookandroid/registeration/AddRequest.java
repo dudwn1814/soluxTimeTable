@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class AddRequest extends StringRequest {
 
-    final static private String URL = "http://duwjd20602.cafe24.com/CourseAdd.php";
+    final static private String URL = "https://duwjd20602.cafe24.com/CourseAdd.php";
     private Map<String, String> parameters;
 
     public AddRequest(String userID, String courseID, Response.Listener<String> listener){
