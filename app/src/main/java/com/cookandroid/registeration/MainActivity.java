@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                     noticeDate = object.getString("noticeDate");
                     Notice notice = new Notice(noticeContent, noticeName, noticeDate);
                     noticeList.add(notice);
+                    adapter.notifyDataSetChanged();
                     count++;
                  }
              }  catch (Exception e) {
