@@ -30,14 +30,14 @@ import java.util.List;
 public class CourseListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Course> courseList;
+    private List<Course> courseList = new ArrayList<>();
     private Fragment parent;
     private String userID = MainActivity.userID;
     private Schedule schedule = new Schedule();
     private List<Integer> courseIDList;
     public static int totalCredit = 0;
 
-    public CourseListAdapter(Context context, List<Course> CourseList, Fragment parent) {
+    public CourseListAdapter(Context context, List<Course> courseList, Fragment parent) {
         this.context = context;
         this.courseList = courseList;
         this.parent = parent;
@@ -235,7 +235,7 @@ public class CourseListAdapter extends BaseAdapter {
         protected void onPreExecute() {
             try
             {
-                target = "http://duwjd20602.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(userID, "UTF-8");
+                target = "https://duwjd20602.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(userID, "UTF-8");
             }
             catch (Exception e)
             {

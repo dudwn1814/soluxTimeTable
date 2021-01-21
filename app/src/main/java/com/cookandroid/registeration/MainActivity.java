@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
          @Override
          public void onPostExecute(String result) {
+             //noticeListView.setAdapter(adapter);
              try{
                  JSONObject jsonObject = new JSONObject(result);
                  JSONArray jsonArray = jsonObject.getJSONArray("response");
@@ -149,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
                     noticeDate = object.getString("noticeDate");
                     Notice notice = new Notice(noticeContent, noticeName, noticeDate);
                     noticeList.add(notice);
+                    adapter.notifyDataSetChanged();
                     count++;
                  }
              }  catch (Exception e) {

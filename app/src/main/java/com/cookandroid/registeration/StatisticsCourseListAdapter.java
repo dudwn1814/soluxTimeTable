@@ -29,7 +29,7 @@ import java.util.List;
 public class StatisticsCourseListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Course> courseList;
+    private List<Course> courseList = new ArrayList<>();
     private Fragment parent;
     private String userID = MainActivity.userID;
 
