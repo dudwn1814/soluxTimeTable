@@ -105,18 +105,6 @@ public class StatisticsFragment extends Fragment {
        rankList = new ArrayList<Course>();
        rankListAdapter = new RankListAdapter(getContext().getApplicationContext(), rankList, this);
        rankListView.setAdapter(rankListAdapter);
-       rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-           @Override
-           public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-           }
-
-           @Override
-           public void onNothingSelected(AdapterView<?> adapterView) {
-
-           }
-       });
-       //new ByEntire().execute();
 
        rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
            @Override
@@ -175,7 +163,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -230,7 +218,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -255,7 +243,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -310,7 +298,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor,courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -335,7 +323,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -390,7 +378,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -416,7 +404,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -471,7 +459,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -497,7 +485,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -552,7 +540,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -578,7 +566,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -633,7 +621,7 @@ public class StatisticsFragment extends Fragment {
                     courseDivide = object.getInt("courseDivide");
                     coursePersonnel= object.getInt("coursePersonnel");
                     courseTime = object.getString("courseTime");
-                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel,courseTime, courseProfessor));
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseProfessor, courseTime));
                     count++;
                 }
                 rankListAdapter.notifyDataSetChanged();
@@ -658,7 +646,7 @@ public class StatisticsFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
                 while((temp = bufferedReader.readLine())!= null)
                 {
-                    stringBuilder.append(temp + "Wn");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();

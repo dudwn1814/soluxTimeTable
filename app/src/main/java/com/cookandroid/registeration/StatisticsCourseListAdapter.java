@@ -29,12 +29,12 @@ import java.util.List;
 public class StatisticsCourseListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Course> courseList = new ArrayList<>();
+    private List<Course> courseList;
     private Fragment parent;
     private String userID = MainActivity.userID;
 
 
-    public StatisticsCourseListAdapter(Context context, List<Course> CourseList, Fragment parent) {
+    public StatisticsCourseListAdapter(Context context, List<Course> courseList, Fragment parent) {
         this.context = context;
         this.courseList = courseList;
         this.parent = parent;
@@ -73,6 +73,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         }
         courseTitle.setText(courseList.get(i).getCourseTitle());
         courseDivide.setText(courseList.get(i).getCourseDivide() + "분반");
+
         if(courseList.get(i).getCoursePersonnel() == 0)
         {
             coursePersonnel.setText("인원 제한 없음");
@@ -108,7 +109,6 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
             public void onClick(View view) {
                     Response.Listener<String> responseListener = (response) -> {
                         try
-
                         {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
@@ -131,7 +131,6 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
                             }
                         }
                         catch(Exception e)
-
                         {
                             e.printStackTrace();
                         }
@@ -141,7 +140,6 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
                     RequestQueue queue = Volley.newRequestQueue(parent.getActivity());
                     queue.add(deleteRequest);
                 }
-
         });
 
         return v;

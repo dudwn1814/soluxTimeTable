@@ -160,33 +160,10 @@ public class ScheduleFragment extends Fragment {
         new BackgroundTask().execute();
     }
 
+    //수정
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
         String target;
-
-        @Override
-        protected String doInBackground(Void... voids) {
-            try{
-                URL url = new URL(target);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                InputStream inputStream = httpURLConnection.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String temp;
-                StringBuilder stringBuilder = new StringBuilder();
-                while((temp = bufferedReader.readLine())!= null)
-                {
-                    stringBuilder.append(temp + "Wn");
-                }
-                bufferedReader.close();
-                inputStream.close();
-                httpURLConnection.disconnect();
-                return stringBuilder.toString().trim();
-            }  catch (Exception e) {
-                e.printStackTrace();
-            }
-
-            return null;
-        }
 
         @Override
         protected void onPreExecute() {
@@ -200,9 +177,33 @@ public class ScheduleFragment extends Fragment {
             }
         }
 
+        @Override
+        protected String doInBackground(Void... voids) {
+            try{
+                URL url = new URL(target);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String temp;
+                StringBuilder stringBuilder = new StringBuilder();
+                while((temp = bufferedReader.readLine()) != null)
+                {
+                    stringBuilder.append(temp + "\n");
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();
+            }  catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+
 
         @Override
-        public void onProgressUpdate(Void... values) {
+        public void onProgressUpdate(Void... values){
             super.onProgressUpdate();
         }
 
@@ -232,6 +233,7 @@ public class ScheduleFragment extends Fragment {
             schedule.setting(monday, tuesday, wednesday, thursday, friday, getContext());
         }
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
