@@ -236,7 +236,7 @@ public class Schedule {
             professor="";
         }
         else{
-            professor ="(" + courseProfessor + ")";
+            professor ="";
         }
         int temp;
         if((temp = scheduleText.indexOf("월")) > -1)

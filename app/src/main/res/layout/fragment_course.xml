@@ -48,7 +48,7 @@
             android:id="@+id/yearSpinner"></Spinner>
 
         <Spinner
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
@@ -73,11 +73,11 @@
         android:paddingRight="10dp">
 
         <Spinner
+            android:id="@id/majorSpinner"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:id="@id/majorSpinner"></Spinner>
+            android:layout_marginLeft="10dp"></Spinner>
 
         <Button
             android:id="@+id/searchButton"
