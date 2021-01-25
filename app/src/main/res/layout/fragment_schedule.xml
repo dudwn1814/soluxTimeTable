@@ -182,17 +182,16 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="09"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="1dp"
                 android:autoSizeTextType="uniform"
-                />
+                android:background="@color/colorPrimary"
+                android:gravity="right"
+                android:paddingRight="1dp"
+                android:text="09"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
@@ -299,12 +298,11 @@
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
                 android:id="@+id/tuesday2"
-                android:padding="1dp"
+                android:gravity="center"
                 android:autoSizeTextType="uniform"
                 />
             <com.cookandroid.registeration.AutoResizeTextView
@@ -748,12 +746,12 @@
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
                 android:id="@+id/wednesday7"
                 android:padding="1dp"
+                android:gravity="center"
                 android:autoSizeTextType="uniform"
                 />
 

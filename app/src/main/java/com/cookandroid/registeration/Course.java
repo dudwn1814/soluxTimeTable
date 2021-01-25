@@ -149,16 +149,17 @@ public class Course {
         this.courseRival = courseRival;
         this.courseCredit = courseCredit;
     }
-
-    public Course(int courseID, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseTime, String courseProfessor) {
+     
+    // courseTime과 courseProfesser 위치 바꿔줌
+    public Course(int courseID, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime) {
         this.courseID = courseID;
         this.courseGrade = courseGrade;
         this.courseTitle = courseTitle;
         this.courseCredit = courseCredit;
         this.courseDivide = courseDivide;
         this.coursePersonnel = coursePersonnel;
-        this.courseTime = courseTime;
         this.courseProfessor = courseProfessor;
+        this.courseTime = courseTime;
     }
 
     public int getCourseRival() {
