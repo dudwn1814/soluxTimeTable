@@ -1,7 +1,6 @@
 package com.cookandroid.registeration;
 
 import android.content.Context;
-import android.widget.TextView;
 
 public class Schedule {
 
