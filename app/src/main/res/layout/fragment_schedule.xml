@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScheduleFragment"
@@ -96,16 +97,17 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:layout_width="25dp"
+                android:text="08"
+                android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:autoSizeTextType="uniform"
                 android:background="@color/colorPrimary"
-                android:gravity="right"
-                android:paddingRight="1dp"
-                android:text="8"
                 android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:paddingRight="1dp"
+                android:autoSizeTextType="uniform"
+                />
 
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
@@ -182,7 +184,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="9"
+                android:text="09"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -357,17 +359,16 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="11"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="1dp"
                 android:autoSizeTextType="uniform"
-                />
+                android:background="@color/colorPrimary"
+                android:gravity="right"
+                android:paddingRight="1dp"
+                android:text="11"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
@@ -454,7 +455,7 @@
                 android:textSize="15dp"
                 android:paddingRight="1dp"
                 android:autoSizeTextType="uniform"
-                />
+            />
 
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
@@ -531,7 +532,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="1"
+                android:text="13"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -618,7 +619,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="2"
+                android:text="14"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -705,17 +706,16 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="3"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="1dp"
                 android:autoSizeTextType="uniform"
-                />
+                android:background="@color/colorPrimary"
+                android:gravity="right"
+                android:paddingRight="1dp"
+                android:text="15"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
@@ -793,7 +793,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="4"
+                android:text="16"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -879,7 +879,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="5"
+                android:text="17"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -966,7 +966,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="6"
+                android:text="18"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -1053,7 +1053,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="7"
+                android:text="19"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -1140,7 +1140,7 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="8"
+                android:text="20"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
@@ -1226,17 +1226,17 @@
             android:layout_weight="1">
 
             <com.cookandroid.registeration.AutoResizeTextView
-                android:text="9"
+                android:text="21"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:paddingRight="1dp"
                 android:textSize="15dp"
+                android:paddingRight="1dp"
+                android:autoSizeTextType="uniform"
                 />
-
             <com.cookandroid.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"

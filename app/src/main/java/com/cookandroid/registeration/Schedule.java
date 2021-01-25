@@ -28,6 +28,7 @@ public class Schedule {
         if((temp = scheduleText.indexOf("월")) > -1)
         {
             temp += 2;
+            int count = temp;
             int startPoint = temp;
             int endPoint = temp;
             for(int i = temp; i < scheduleText.length() && scheduleText.charAt(i) != ':'; i++)
