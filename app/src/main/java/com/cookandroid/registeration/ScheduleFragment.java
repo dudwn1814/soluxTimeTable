@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.SlidingDrawer;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -77,11 +79,16 @@ public class ScheduleFragment extends Fragment {
     private AutoResizeTextView friday[] = new AutoResizeTextView[14];
     private Schedule schedule = new Schedule();
 
+    SlidingDrawer drawer;
+
     //해당 fragment 생성 시 실행
     @SuppressLint("WrongViewCast")
     @Override
     public void onActivityCreated(Bundle b){
         super.onActivityCreated(b);
+
+        drawer = (SlidingDrawer) getView().findViewById(R.id.drawer);
+
         monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
         monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
         monday[2] = (AutoResizeTextView) getView().findViewById(R.id.monday2);
@@ -230,7 +237,7 @@ public class ScheduleFragment extends Fragment {
             }  catch (Exception e) {
                 e.printStackTrace();
             }
-            schedule.setting(monday, tuesday, wednesday, thursday, friday, getContext());
+            schedule.setting(drawer, monday, tuesday, wednesday, thursday, friday, getContext());
         }
     }
 

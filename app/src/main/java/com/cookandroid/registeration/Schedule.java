@@ -1,6 +1,9 @@
 package com.cookandroid.registeration;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.SlidingDrawer;
+
 
 public class Schedule {
 
@@ -9,6 +12,7 @@ public class Schedule {
     private String wednesday[] = new String[14];
     private String thursday[] = new String[14];
     private String friday[] = new String[14];
+
 
     public Schedule() {
         for(int i = 0; i < 14; i++)
@@ -117,7 +121,7 @@ public class Schedule {
         }
     }
 
-//////
+    //////
     public boolean validate(String scheduleText) {
         if(scheduleText.equals(""))
         {
@@ -331,7 +335,7 @@ public class Schedule {
         }
     }
     // setting 함수 --> 해당 강의 목록들을 보여주도록 세팅하는 기능
-    public void setting(AutoResizeTextView[] monday,AutoResizeTextView[] tuesday,AutoResizeTextView[] wednesday,AutoResizeTextView[] thursday,AutoResizeTextView[] friday, Context context) {
+    public void setting(SlidingDrawer drawer, AutoResizeTextView[] monday,AutoResizeTextView[] tuesday,AutoResizeTextView[] wednesday,AutoResizeTextView[] thursday,AutoResizeTextView[] friday, Context context) {
         int maxLength = 0;
         String maxString ="";
         for(int i=0; i<14; i++)
@@ -368,6 +372,13 @@ public class Schedule {
             {
                 monday[i].setText(this.monday[i]);
                 monday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+
+                monday[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        drawer.animateOpen();
+                    }
+                });
             }
             else
             {
@@ -377,6 +388,13 @@ public class Schedule {
             {
                 tuesday[i].setText(this.tuesday[i]);
                 tuesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+
+                tuesday[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        drawer.animateOpen();
+                    }
+                });
             }
             else
             {
@@ -386,6 +404,13 @@ public class Schedule {
             {
                 wednesday[i].setText(this.wednesday[i]);
                 wednesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+
+                wednesday[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        drawer.animateOpen();
+                    }
+                });
             }
             else
             {
@@ -395,6 +420,13 @@ public class Schedule {
             {
                 thursday[i].setText(this.thursday[i]);
                 thursday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+
+                thursday[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        drawer.animateOpen();
+                    }
+                });
             }
             else
             {
@@ -404,6 +436,13 @@ public class Schedule {
             {
                 friday[i].setText(this.friday[i]);
                 friday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+
+                friday[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        drawer.animateOpen();
+                    }
+                });
             }
             else
             {
