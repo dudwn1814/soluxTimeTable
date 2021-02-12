@@ -37,6 +37,8 @@ public class CourseListAdapter extends BaseAdapter {
     private List<Integer> courseIDList;
     public static int totalCredit = 0;
 
+    int priority;
+
     public CourseListAdapter(Context context, List<Course> courseList, Fragment parent) {
         this.context = context;
         this.courseList = courseList;
@@ -123,13 +125,45 @@ public class CourseListAdapter extends BaseAdapter {
                             .setPositiveButton("다시 시도", null)
                             .create();
                     dialog.show();
-                } else if (validate == false) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
-                    AlertDialog dialog = builder.setMessage("시간표가 중복됩니다.")
-                            .setPositiveButton("다시 시도", null)
-                            .create();
-                    dialog.show();
                 }
+
+
+                else if (validate == false) {
+                    Response.Listener<String> responseListener = new Response.Listener<String>() {
+
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonResponse = new JSONObject(response);
+                                boolean success = jsonResponse.getBoolean("success");
+                                if (success){
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
+                                    AlertDialog dialog = builder.setMessage("시간표가 중복됩니다.")
+                                            .setPositiveButton("다시 시도", null)
+                                            .create();
+                                    dialog.show();
+                                }
+                                else{
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
+                                    AlertDialog dialog = builder.setMessage("강의 추가에 실패하였습니다.")
+                                            .setNegativeButton("확인",null).create();
+                                    dialog.show();
+                                }
+                            }
+                            catch (Exception e){
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+                    //우선순위를 불러와서 거기서 +1해야함
+                    //priority = courseList.get(i).getPriority() +1;
+                    priority += 1;
+                    AddRequest addRequest = new AddRequest(userID, courseList.get(i).getCourseID() + "", priority + "", responseListener);
+                    RequestQueue queue = Volley.newRequestQueue(parent.getActivity());
+                    queue.add(addRequest);
+                }
+
+
                 else {
                     Response.Listener<String> responseListener = new Response.Listener<String>() {
 
@@ -160,7 +194,7 @@ public class CourseListAdapter extends BaseAdapter {
                         }
                     };
 
-                    AddRequest addRequest = new AddRequest(userID, courseList.get(i).getCourseID() + "", responseListener);
+                    AddRequest addRequest = new AddRequest(userID, courseList.get(i).getCourseID() + "", 0 + "",  responseListener);
                     RequestQueue queue = Volley.newRequestQueue(parent.getActivity());
                     queue.add(addRequest);
                 }
