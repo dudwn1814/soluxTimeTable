@@ -1,8 +1,10 @@
 package com.cookandroid.registeration;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.SlidingDrawer;
+import android.widget.TextView;
 
 
 public class Schedule {
@@ -12,8 +14,6 @@ public class Schedule {
     private String wednesday[] = new String[14];
     private String thursday[] = new String[14];
     private String friday[] = new String[14];
-
-
     public Schedule() {
         for(int i = 0; i < 14; i++)
         {

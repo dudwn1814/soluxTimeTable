@@ -60,6 +60,7 @@ public class RankListAdapter extends BaseAdapter {
         TextView courseTime = (TextView)v.findViewById(R.id.courseTime);
 
 
+
         rankTextView.setText((i+1) +"위");
         if(i != 0)
         {

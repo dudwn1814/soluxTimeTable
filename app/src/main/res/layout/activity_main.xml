@@ -53,6 +53,20 @@
             android:background="@color/colorPrimary"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="일정 정리"
+            android:id="@+id/calendarButton"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
         
     </LinearLayout>
     
