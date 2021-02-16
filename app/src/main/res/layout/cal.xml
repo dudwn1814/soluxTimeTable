@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CalendarFragment"
+    android:orientation="horizontal"
+    android:background="#FFF"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="일정을 정리해보세요"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:textSize="23sp">
+    </TextView>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_calendar_today_24" >
+    </ImageButton>
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:background="@color/colorCalendar"></CalendarView>
+
+
+
+        <EditText
+            android:id="@+id/textInput"
+            android:layout_marginTop="500dp"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:hint="할 일을 적어보세요"
+            android:privateImeOptions="defaultInputmode=korean"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveButton"
+            android:text="저장"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="#65B8FB"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="350dp"/>
+
+
+</RelativeLayout >
+
+
