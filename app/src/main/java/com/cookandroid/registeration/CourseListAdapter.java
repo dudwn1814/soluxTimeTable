@@ -137,11 +137,16 @@ public class CourseListAdapter extends BaseAdapter {
                                 JSONObject jsonResponse = new JSONObject(response);
                                 boolean success = jsonResponse.getBoolean("success");
                                 if (success){
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
-                                    AlertDialog dialog = builder.setMessage("시간표가 중복됩니다.")
-                                            .setPositiveButton("다시 시도", null)
-                                            .create();
-                                    dialog.show();
+                                    //DB에 없을 경우에만 추가!
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
+                                        AlertDialog dialog = builder.setMessage("시간표가 중복됩니다.")
+                                                .setPositiveButton("다시 시도", null)
+                                                .create();
+                                        dialog.show();
+
+                                        courseIDList.add(courseList.get(i).getCourseID());
+                                        System.out.println("courseIDList" + courseIDList);
+                                        schedule.addSchedule(courseList.get(i).getCourseTime());
                                 }
                                 else{
                                     AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
@@ -269,6 +274,7 @@ public class CourseListAdapter extends BaseAdapter {
                     courseTime = object.getString("courseTime");
                     totalCredit += object.getInt("courseCredit");
                     courseIDList.add(courseID);
+                    System.out.println("origin courseIDList"+courseIDList);
                     schedule.addSchedule(courseTime);
                     count++;
                 }

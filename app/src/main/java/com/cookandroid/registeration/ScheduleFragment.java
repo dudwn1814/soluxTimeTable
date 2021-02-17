@@ -80,6 +80,7 @@ public class ScheduleFragment extends Fragment {
     private Schedule schedule = new Schedule();
 
     SlidingDrawer drawer;
+    TextView text1, text2, text3;
 
     //해당 fragment 생성 시 실행
     @SuppressLint("WrongViewCast")
@@ -88,6 +89,9 @@ public class ScheduleFragment extends Fragment {
         super.onActivityCreated(b);
 
         drawer = (SlidingDrawer) getView().findViewById(R.id.drawer);
+        text1 = (TextView) getView().findViewById(R.id.Text1);
+        text2 = (TextView) getView().findViewById(R.id.Text2);
+        text3 = (TextView) getView().findViewById(R.id.Text3);
 
         monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
         monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
@@ -224,6 +228,7 @@ public class ScheduleFragment extends Fragment {
                 String courseTime;
                 String courseTitle;
                 int courseID;
+                int Priority;
                 while (count < jsonArray.length())
                 {
                     JSONObject object = jsonArray.getJSONObject(count);
@@ -231,13 +236,17 @@ public class ScheduleFragment extends Fragment {
                     courseProfessor = object.getString("courseProfessor");
                     courseTime = object.getString("courseTime");
                     courseTitle = object.getString("courseTitle");
-                    schedule.addSchedule(courseTime, courseTitle, courseProfessor);
+                    Priority = object.getInt("Priority");
+                    System.out.println("Priority" + Priority);
+                    if(Priority == 0) {
+                        schedule.addSchedule(courseTime, courseTitle, courseProfessor);
+                    }
                     count++;
                 }
             }  catch (Exception e) {
                 e.printStackTrace();
             }
-            schedule.setting(drawer, monday, tuesday, wednesday, thursday, friday, getContext());
+            schedule.setting(text1, text2, text3, drawer, monday, tuesday, wednesday, thursday, friday, getContext());
         }
     }
 
