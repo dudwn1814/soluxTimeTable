@@ -23,6 +23,7 @@ public class Schedule {
 
     String proName = "";
 
+
     public Schedule() {
         for(int i = 0; i < 14; i++)
         {
