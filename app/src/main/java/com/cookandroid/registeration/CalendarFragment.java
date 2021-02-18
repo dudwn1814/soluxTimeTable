@@ -154,7 +154,7 @@ public class CalendarFragment extends Fragment {
                             if(days[k] == currentDay){
                                 for(int j=0;j<index;j++){
                                     if(months[j] == currentMonth && days[j] == currentDay && years[j] == currentYear){
-                                        textInput.setText(calendarString.get(k));
+                                        textInput.setText(calendarString.get());
                                         return;
                                     }
                                 }
