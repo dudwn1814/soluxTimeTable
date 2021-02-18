@@ -139,7 +139,7 @@ public class CourseListAdapter extends BaseAdapter {
                                 if (success){
                                     //DB에 없을 경우에만 추가!
                                         AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
-                                        AlertDialog dialog = builder.setMessage("시간표가 중복되어 장바구니에 추가됩니다.")
+                                        AlertDialog dialog = builder.setMessage("시간표가 중복되어 목록에 추가됩니다.")
                                                 .setPositiveButton("확인", null)
                                                 .create();
                                         dialog.show();
