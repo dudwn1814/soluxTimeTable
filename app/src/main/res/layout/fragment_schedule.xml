@@ -1345,14 +1345,6 @@
                 android:text="교수님"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/Text3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="수업시간"
-                android:textSize="20sp" />
-
 
         </LinearLayout>
 

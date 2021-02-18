@@ -14,6 +14,15 @@ public class Schedule {
     private String wednesday[] = new String[14];
     private String thursday[] = new String[14];
     private String friday[] = new String[14];
+
+    private String monPro[] = new String[14];
+    private String tuePro[] = new String[14];
+    private String wedPro[] = new String[14];
+    private String thuPro[] = new String[14];
+    private String friPro[] = new String[14];
+
+    String proName = "";
+
     public Schedule() {
         for(int i = 0; i < 14; i++)
         {
@@ -22,6 +31,16 @@ public class Schedule {
             wednesday[i] = "";
             thursday[i] = "";
             friday[i] = "";
+
+        }
+
+        for(int i = 0; i < 14; i++)
+        {
+            monPro[i] = "";
+            tuePro[i] = "";
+            wedPro[i] = "";
+            thuPro[i] = "";
+            friPro[i] = "";
 
         }
     }
@@ -241,6 +260,7 @@ public class Schedule {
         }
         else{
             professor ="";
+            proName = courseProfessor;
         }
         int temp;
         if((temp = scheduleText.indexOf("월")) > -1)
@@ -258,6 +278,7 @@ public class Schedule {
                 {
                     endPoint = i;
                     monday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = courseTitle+professor;
+                    monPro[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = proName;
                 }
             }
         }
@@ -276,6 +297,7 @@ public class Schedule {
                 {
                     endPoint = i;
                     tuesday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = courseTitle+professor;
+                    tuePro[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = proName;
                 }
             }
         }
@@ -294,6 +316,7 @@ public class Schedule {
                 {
                     endPoint = i;
                     wednesday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = courseTitle+professor;
+                    wedPro[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = proName;
                 }
             }
         }
@@ -312,6 +335,7 @@ public class Schedule {
                 {
                     endPoint = i;
                     thursday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = courseTitle+professor;
+                    thuPro[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = proName;
                 }
             }
         }
@@ -330,12 +354,13 @@ public class Schedule {
                 {
                     endPoint = i;
                     friday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = courseTitle+professor;
+                    friPro[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))] = proName;
                 }
             }
         }
     }
     // setting 함수 --> 해당 강의 목록들을 보여주도록 세팅하는 기능
-    public void setting(TextView text1, TextView text2, TextView text3, SlidingDrawer drawer, AutoResizeTextView[] monday,AutoResizeTextView[] tuesday,AutoResizeTextView[] wednesday,AutoResizeTextView[] thursday,AutoResizeTextView[] friday, Context context) {
+    public void setting(TextView text1, TextView text2, SlidingDrawer drawer, AutoResizeTextView[] monday,AutoResizeTextView[] tuesday,AutoResizeTextView[] wednesday,AutoResizeTextView[] thursday,AutoResizeTextView[] friday, Context context) {
         int maxLength = 0;
         String maxString ="";
         for(int i=0; i<14; i++)
@@ -379,8 +404,7 @@ public class Schedule {
                     public void onClick(View view) {
                         drawer.animateOpen();
                         text1.setText(monday[finalI].getText());
-                        text2.setText("굣 이름");
-                        text3.setText("쉅 시간");
+                        text2.setText(monPro[finalI]);
                     }
                 });
             }
@@ -399,8 +423,7 @@ public class Schedule {
                     public void onClick(View view) {
                         drawer.animateOpen();
                         text1.setText(tuesday[finalI].getText());
-                        text2.setText("굣 이름");
-                        text3.setText("쉅 시간");
+                        text2.setText(tuePro[finalI]);
                     }
                 });
             }
@@ -419,8 +442,7 @@ public class Schedule {
                     public void onClick(View view) {
                         drawer.animateOpen();
                         text1.setText(wednesday[finalI].getText());
-                        text2.setText("굣 이름");
-                        text3.setText("쉅 시간");
+                        text2.setText(wedPro[finalI]);
                     }
                 });
             }
@@ -439,8 +461,7 @@ public class Schedule {
                     public void onClick(View view) {
                         drawer.animateOpen();
                         text1.setText(thursday[finalI].getText());
-                        text2.setText("굣 이름");
-                        text3.setText("쉅 시간");
+                        text2.setText(thuPro[finalI]);
                     }
                 });
             }
@@ -459,8 +480,7 @@ public class Schedule {
                     public void onClick(View view) {
                         drawer.animateOpen();
                         text1.setText(friday[finalI].getText());
-                        text2.setText("굣 이름");
-                        text3.setText("쉅 시간");
+                        text2.setText(friPro[finalI]);
                     }
                 });
             }

@@ -80,7 +80,7 @@ public class ScheduleFragment extends Fragment {
     private Schedule schedule = new Schedule();
 
     SlidingDrawer drawer;
-    TextView text1, text2, text3;
+    TextView text1, text2;
 
     //해당 fragment 생성 시 실행
     @SuppressLint("WrongViewCast")
@@ -91,7 +91,6 @@ public class ScheduleFragment extends Fragment {
         drawer = (SlidingDrawer) getView().findViewById(R.id.drawer);
         text1 = (TextView) getView().findViewById(R.id.Text1);
         text2 = (TextView) getView().findViewById(R.id.Text2);
-        text3 = (TextView) getView().findViewById(R.id.Text3);
 
         monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
         monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
@@ -246,7 +245,7 @@ public class ScheduleFragment extends Fragment {
             }  catch (Exception e) {
                 e.printStackTrace();
             }
-            schedule.setting(text1, text2, text3, drawer, monday, tuesday, wednesday, thursday, friday, getContext());
+            schedule.setting(text1, text2, drawer, monday, tuesday, wednesday, thursday, friday, getContext());
         }
     }
 
